@@ -2,6 +2,22 @@
   const closeAd = document.getElementById('close-sponsor');
   const adBox = document.getElementById('sponsor-box');
   const playoffImage = document.getElementById('playoff-image');
+  const menuButton = document.querySelector('.menu-button');
+  const siteMenu = document.getElementById('site-menu');
+
+  if (menuButton && siteMenu) {
+    menuButton.addEventListener('click', () => {
+      const isOpen = siteMenu.classList.toggle('is-open');
+      menuButton.setAttribute('aria-expanded', String(isOpen));
+    });
+
+    document.addEventListener('click', (event) => {
+      if (!siteMenu.classList.contains('is-open')) return;
+      if (siteMenu.contains(event.target) || menuButton.contains(event.target)) return;
+      siteMenu.classList.remove('is-open');
+      menuButton.setAttribute('aria-expanded', 'false');
+    });
+  }
 
   const showAd = () => {
     document.body.classList.add('sponsor-ready');
