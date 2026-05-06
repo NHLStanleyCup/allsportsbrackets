@@ -223,8 +223,10 @@ img#playoff-image {
 .year-grid a:hover, .year-grid a[aria-current="page"],
 .language-switch a:hover, .language-switch a[aria-current="page"],
 .home-links a:hover {
-  background: #002868;
+  background: linear-gradient(180deg, #0a4a9d 0%, #00357f 100%);
   color: #fff;
+  transform: translateY(2px);
+  box-shadow: 0 3px 0 #001a45, 0 5px 10px rgba(0,0,0,0.2);
 }
 
 footer {
@@ -400,8 +402,10 @@ body.sponsor-ready #sponsor-box {
 .site-menu a:hover,
 .site-menu a:focus,
 .site-menu a[aria-current="page"] {
-  background: #002868;
+  background: linear-gradient(180deg, #0a4a9d 0%, #00357f 100%);
   color: #fff;
+  transform: translateY(2px);
+  box-shadow: 0 3px 0 #001a45, 0 5px 10px rgba(0,0,0,0.2);
 }
 
 .seasons-page {
@@ -422,18 +426,20 @@ body.sponsor-ready #sponsor-box {
   gap: 10px;
   min-height: 52px;
   padding: 10px 12px;
-  color: #002868;
-  background: #fff;
-  border: 1px solid #c8d1e0;
+  color: #fff;
+  background: linear-gradient(180deg, #073b82 0%, #002868 100%);
+  border: 1px solid #001d4d;
   border-radius: 6px;
   text-decoration: none;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+  box-shadow: 0 5px 0 #001a45, 0 8px 14px rgba(0,0,0,0.22);
 }
 
 .season-card:hover,
 .season-card:focus {
-  background: #002868;
+  background: linear-gradient(180deg, #0a4a9d 0%, #00357f 100%);
   color: #fff;
+  transform: translateY(2px);
+  box-shadow: 0 3px 0 #001a45, 0 5px 10px rgba(0,0,0,0.2);
 }
 
 .season-card-year {
