@@ -41,9 +41,11 @@
   </header>
 
   <main>
-    <div class="season-selector" aria-label="Season navigation">
-      <a class="arrow" href="nhl-playoff-bracket-2015.html" aria-label="Newer season">&#9664;</a>
-      <h2 class="season-title">Season
+    <div class="season-row season-row-with-update" aria-label="Season navigation">
+      <span class="last-updated"></span>
+      <div class="season-selector">
+        <a class="arrow" href="nhl-playoff-bracket-2015.html" aria-label="Newer season">&#9664;</a>
+        <h2 class="season-title">Season
         <select class="season-jump" aria-label="Choose a season" onchange="if (this.value) window.location.href = this.value;">
           <option value="nhl-playoff-bracket-2026.html">2026</option>
           <option value="nhl-playoff-bracket-2025.html">2025</option>
@@ -99,7 +101,8 @@
           <option value="nhl-playoff-bracket-1975.html">1975</option>
         </select>
       </h2>
-      <a class="arrow" href="nhl-playoff-bracket-2013.html" aria-label="Previous season">&#9654;</a>
+        <a class="arrow" href="nhl-playoff-bracket-2013.html" aria-label="Previous season">&#9654;</a>
+      </div>
     </div>
 
     <div class="playoff-stage">

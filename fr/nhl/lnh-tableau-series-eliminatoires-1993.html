@@ -41,9 +41,11 @@
   </header>
 
   <main>
-    <div class="season-selector" aria-label="Navigation des saisons">
-      <a class="arrow" href="lnh-tableau-series-eliminatoires-1994.html" aria-label="Saison plus récente">&#9664;</a>
-      <h2 class="season-title">Saison
+    <div class="season-row season-row-with-update" aria-label="Navigation des saisons">
+      <span class="last-updated"></span>
+      <div class="season-selector">
+        <a class="arrow" href="lnh-tableau-series-eliminatoires-1994.html" aria-label="Saison plus récente">&#9664;</a>
+        <h2 class="season-title">Saison
         <select class="season-jump" aria-label="Choisir une saison" onchange="if (this.value) window.location.href = this.value;">
           <option value="lnh-tableau-series-eliminatoires-2026.html">2026</option>
           <option value="lnh-tableau-series-eliminatoires-2025.html">2025</option>
@@ -99,7 +101,8 @@
           <option value="lnh-tableau-series-eliminatoires-1975.html">1975</option>
         </select>
       </h2>
-      <a class="arrow" href="lnh-tableau-series-eliminatoires-1992.html" aria-label="Saison précédente">&#9654;</a>
+        <a class="arrow" href="lnh-tableau-series-eliminatoires-1992.html" aria-label="Saison précédente">&#9654;</a>
+      </div>
     </div>
 
     <div class="playoff-stage">
