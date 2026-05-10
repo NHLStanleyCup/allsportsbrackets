@@ -1,40 +1,26 @@
-﻿document.addEventListener('DOMContentLoaded', () => {
-  const closeAd = document.getElementById('close-sponsor');
-  const adBox = document.getElementById('sponsor-box');
+document.addEventListener('DOMContentLoaded', () => {
+  const closeSponsor = document.getElementById('close-sponsor');
+  const sponsorBox = document.getElementById('sponsor-box');
   const playoffImage = document.getElementById('playoff-image');
   const menuButton = document.querySelector('.menu-button');
   const siteMenu = document.getElementById('site-menu');
 
-  if (menuButton && siteMenu) {
-    menuButton.addEventListener('click', () => {
-      const isOpen = siteMenu.classList.toggle('is-open');
-      menuButton.setAttribute('aria-expanded', String(isOpen));
-    });
-
-    document.addEventListener('click', (event) => {
-      if (!siteMenu.classList.contains('is-open')) return;
-      if (siteMenu.contains(event.target) || menuButton.contains(event.target)) return;
-      siteMenu.classList.remove('is-open');
-      menuButton.setAttribute('aria-expanded', 'false');
-    });
-  }
-
-  const showAd = () => {
+  const showSponsor = () => {
     document.body.classList.add('sponsor-ready');
   };
 
-  if (adBox && playoffImage) {
+  if (sponsorBox && playoffImage) {
     if (playoffImage.complete) {
-      window.requestAnimationFrame(showAd);
+      window.requestAnimationFrame(showSponsor);
     } else {
-      playoffImage.addEventListener('load', () => window.requestAnimationFrame(showAd), { once: true });
-      playoffImage.addEventListener('error', showAd, { once: true });
+      playoffImage.addEventListener('load', () => window.requestAnimationFrame(showSponsor), { once: true });
+      playoffImage.addEventListener('error', showSponsor, { once: true });
     }
   }
 
-  if (closeAd && adBox) {
-    closeAd.addEventListener('click', () => {
-      adBox.style.display = 'none';
+  if (closeSponsor && sponsorBox) {
+    closeSponsor.addEventListener('click', () => {
+      sponsorBox.style.display = 'none';
     });
   }
 });

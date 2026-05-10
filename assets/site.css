@@ -1,4 +1,4 @@
-﻿body {
+body {
   font-family: Arial, sans-serif;
   background-color: #f3f3f3;
   text-align: center;
@@ -16,12 +16,13 @@ header, footer {
 
 header {
   position: relative;
-  padding: 12px 20px;
+  padding: 14px 20px;
 }
 
 h1 {
   margin: 0;
 }
+
 .menu-button {
   position: absolute;
   left: 18px;
@@ -52,6 +53,7 @@ h1 {
 .menu-button:focus {
   background: rgba(255,255,255,0.18);
 }
+
 .language-button {
   position: absolute;
   right: 18px;
@@ -76,33 +78,6 @@ h1 {
   background: rgba(255,255,255,0.18);
 }
 
-.season-jump {
-  min-width: 92px;
-  padding: 8px 10px;
-  border: 1px solid #c8d1e0;
-  border-radius: 6px;
-  background: #fff;
-  color: #002868;
-  font-weight: bold;
-}
-
-.season-title {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.last-updated {
-  position: absolute;
-  left: 24px;
-  top: 50%;
-  transform: translateY(-50%);
-  color: #555;
-  font-size: 14px;
-  font-weight: bold;
-  white-space: nowrap;
-}
-
 h2 {
   color: #002868;
   margin: 0;
@@ -110,15 +85,6 @@ h2 {
 
 main {
   flex: 1;
-}
-
-.season-row {
-  position: relative;
-  margin-top: 10px;
-}
-
-.season-row .season-selector {
-  margin-top: 0;
 }
 
 .season-selector, .language-switch {
@@ -195,13 +161,13 @@ img#playoff-image {
   margin: 0;
 }
 
-.home-panel {
+.year-list, .home-panel {
   max-width: 960px;
   margin: 20px auto 28px;
   padding: 0 16px;
 }
 
-.home-panel h2 {
+.year-list h2, .home-panel h2 {
   margin-bottom: 12px;
 }
 
@@ -324,53 +290,6 @@ body.sponsor-ready #sponsor-box {
   max-height: 48px;
 }
 
-@media (max-width: 700px) {
-  header {
-    padding: 10px 48px;
-  }
-
-  .language-button {
-    right: 10px;
-    min-width: 36px;
-    height: 34px;
-    padding: 0 9px;
-  }
-
-  h1 {
-    font-size: 24px;
-  }
-
-  .menu-button {
-    left: 10px;
-    width: 34px;
-    height: 34px;
-  }
-
-  .season-selector {
-    gap: 14px;
-    flex-wrap: wrap;
-  }
-
-  .last-updated {
-    position: static;
-    transform: none;
-    flex-basis: 100%;
-    order: -1;
-  }
-
-  .arrow {
-    font-size: 28px;
-  }
-
-  #sponsor-box {
-    position: static;
-    transform: none;
-    margin: 12px auto;
-    max-width: calc(100% - 48px);
-  }
-}
-
-
 .site-menu {
   position: absolute;
   left: 18px;
@@ -457,11 +376,52 @@ body.sponsor-ready #sponsor-box {
 }
 
 @media (max-width: 700px) {
+  header {
+    padding: 12px 52px;
+  }
+
   .site-menu {
     left: 10px;
   }
 
   .season-card-grid {
     grid-template-columns: 1fr;
+  }
+
+  .menu-button {
+    left: 10px;
+    width: 34px;
+    height: 34px;
+  }
+
+  .language-button {
+    right: 10px;
+    min-width: 36px;
+    height: 34px;
+    padding: 0 9px;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  .season-selector {
+    gap: 14px;
+  }
+
+  .playoff-stage {
+    display: block;
+    max-width: 90%;
+  }
+
+  .arrow {
+    font-size: 28px;
+  }
+
+  #sponsor-box {
+    position: static;
+    transform: none;
+    margin: 12px auto;
+    max-width: calc(100% - 48px);
   }
 }
