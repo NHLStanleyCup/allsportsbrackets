@@ -89,21 +89,24 @@ main {
 
 
 .last-updated {
-  position: absolute;
-  left: 24px;
-  top: 50%;
-  transform: translateY(-50%);
+  justify-self: start;
   font-size: 14px;
   color: #364052;
   white-space: nowrap;
 }
 
 .season-row {
-  position: relative;
+  display: grid;
+  grid-template-columns: minmax(260px, 1fr) auto minmax(260px, 1fr);
+  align-items: center;
+  column-gap: 16px;
   margin-top: 10px;
+  padding: 0 24px;
 }
 
 .season-row .season-selector {
+  grid-column: 2;
+  justify-self: center;
   margin-top: 0;
 }
 .season-selector, .language-switch {
@@ -429,11 +432,15 @@ body.sponsor-ready #sponsor-box {
   }
 
 
+  .season-row {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 0 12px;
+  }
+
   .last-updated {
-    position: static;
-    transform: none;
-    flex-basis: 100%;
-    order: -1;
+    justify-self: auto;
     text-align: center;
     white-space: normal;
   }
