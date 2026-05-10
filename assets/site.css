@@ -87,6 +87,25 @@ main {
   flex: 1;
 }
 
+
+.last-updated {
+  position: absolute;
+  left: 24px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 14px;
+  color: #364052;
+  white-space: nowrap;
+}
+
+.season-row {
+  position: relative;
+  margin-top: 10px;
+}
+
+.season-row .season-selector {
+  margin-top: 0;
+}
 .season-selector, .language-switch {
   display: flex;
   align-items: center;
@@ -409,6 +428,15 @@ body.sponsor-ready #sponsor-box {
     gap: 14px;
   }
 
+
+  .last-updated {
+    position: static;
+    transform: none;
+    flex-basis: 100%;
+    order: -1;
+    text-align: center;
+    white-space: normal;
+  }
   .playoff-stage {
     display: block;
     max-width: 90%;
